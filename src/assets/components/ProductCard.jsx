@@ -7,9 +7,8 @@ function ProductCard({product}) {
             <img 
             src={product.image} 
             alt={product.name}
-            className = "h-48 w-full object-cover rounded"
-            >
-            </img>
+            className="h-[500px] w-[500px] object-cover rounded"
+            />
 
             <h2 className="mt-2 font-semibold text-lg">{product.name}</h2>
             <p className="text-blue-500 font-bold">${product.price}</p>
