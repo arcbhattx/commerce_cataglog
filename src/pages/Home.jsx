@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
 import ProductCard from "../assets/components/ProductCard";
+import Navbar from "../assets/components/Navbar";
 
 //Displays a grid of all the products fetched from "https://cart-api.alexrodriguez.workers.dev/"
 
@@ -15,12 +16,19 @@ function Home(){
     }, []);
 
     return(
-        <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> 
-            <h1> Hi</h1>
-            {products.map(product =>(
-                <ProductCard key={product.id} product={product}/>
-            ))}
+
+        <div className="flex flex-col">
+            <Navbar/>
+
+            <div className="grid grid-cols-4 gap-2"> 
+                
+                {products.map(product =>(
+                    <ProductCard key={product.id} product={product}/>
+                ))}
+            </div> 
+
         </div>
+        
     )
 }
 

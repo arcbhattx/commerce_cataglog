@@ -3,17 +3,18 @@ import {Link} from "react-router-dom";
 function ProductCard({product}) {
     return (
 
-        <Link to={`/product/${product.id}`} className="bg-white p-4 rounded shadow hover:scale-105 transition">
-            <img 
-            src={product.image} 
-            alt={product.name}
-            className="h-[500px] w-[500px] object-cover rounded"
-            />
+<div className="p-0 border border-gray rounded-2xl shadow-sm hover:shadow-md ">
+  <Link to={`/product/${product.id}`} className="block text-center">
+    <img 
+      src={product.image} 
+      alt={product.name}
+      className="h-[200px] w-[300px] object-cover rounded-xl mx-auto"
+    />
+    <h2 className="mt-3 text-sm font-semibold text-gray-800 truncate">{product.name}</h2>
+    <p className="text-sm text-gray-500 font-medium mt-1">${product.price}</p>
+  </Link>
+</div>
 
-            <h2 className="mt-2 font-semibold text-lg">{product.name}</h2>
-            <p className="text-blue-500 font-bold">${product.price}</p>
-
-        </Link>
     )
 }
 
