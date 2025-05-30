@@ -15,21 +15,22 @@ function Home(){
         .catch(err => console.error(err));
     }, []);
 
-    return(
+    return (
+        <div className="flex flex-col min-h-screen">
+            
+            {/* Loads up the navbar */}
+            <Navbar />
 
-        <div className="flex flex-col">
-            <Navbar/>
-
-            <div className="grid grid-cols-4 gap-2"> 
-                
-                {products.map(product =>(
-                    <ProductCard key={product.id} product={product}/>
-                ))}
-            </div> 
-
+            {/* loads up Product Grid */}
+            <div className="w-full max-w-screen-xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
+            {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+            ))}
+            </div>
+            
         </div>
+    );
         
-    )
 }
 
 export default Home;
