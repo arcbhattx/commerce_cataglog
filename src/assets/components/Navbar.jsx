@@ -11,10 +11,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <div className="text-2xl font-bold text-black-600">DigitalNest Shop</div>
+        <div className="text-2xl font-mono font-bold text-black border-2 p-2 border-black">
+          DigitalNest Shop
+        </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 font-mono">
           {navLinks.map((link) => (
             <a
               key={link}
