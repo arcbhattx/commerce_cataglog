@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
-import ProductPage from "./pages/ProductPage"; // A page for each product
-import CartPage from "./pages/CartPage"; //Cart page
+import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/commerce_cataglog">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/cart" element={<CartPage />} /> 
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
     </Router>
   );
