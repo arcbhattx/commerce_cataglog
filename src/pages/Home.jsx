@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 import ProductCard from "../assets/components/ProductCard";
 import Navbar from "../assets/components/Navbar";
+import Filter from "../assets/components/Filter";
 
 //Displays a grid of all the products fetched from "https://cart-api.alexrodriguez.workers.dev/"
 
@@ -20,6 +21,9 @@ function Home(){
             
             {/* Loads up the navbar */}
             <Navbar />
+
+            {/*loads up the filter icon*/}
+            <Filter/>
 
             {/* loads up Product Grid */}
             <div className="w-full max-w-screen-xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
